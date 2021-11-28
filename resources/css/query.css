@@ -1,0 +1,105 @@
+@media only screen and (max-width: 1180px) {
+  .row {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .row {
+    width: 90%;
+  }
+  .col {
+    display: block;
+    text-align: center;
+  }
+  .nav-bar {
+    display: none;
+  }
+  h1 {
+    font-size: 170%;
+    margin-bottom: 60px;
+  }
+  h2 {
+    font-size: 140%;
+    letter-spacing: 0;
+    word-spacing: 0;
+  }
+  .btn {
+    margin-right: 20px;
+    padding: 10px 15px;
+  }
+  .long-para {
+    width: 98%;
+    font-size: 90%;
+  }
+  h3 {
+    font-size: 120%;
+    margin: 40px 0 10px;
+    word-spacing: 0;
+    letter-spacing: 0;
+  }
+  .para {
+    width: 90%;
+  }
+  .meals {
+    display: block;
+  }
+  .meals li {
+    width: 100%;
+    height: auto;
+    list-style: none;
+    margin: 0;
+  }
+  .hit_box_1 {
+    width: 100%;
+  }
+  .app {
+    width: 220px;
+    float: none;
+  }
+  .hit_box_2 {
+    width: 100%;
+    padding-left: 5%;
+  }
+
+  .step div:last-child {
+    width: 90%;
+  }
+  .download {
+    height: 40px;
+    width: auto;
+  }
+  .downImg {
+    padding-left: 10px;
+  }
+  blockquote {
+    margin-bottom: 50px;
+  }
+  cite {
+    margin: 10px 0 0 0;
+    display: flex;
+    align-items: center;
+  }
+  .planContainer {
+    width: 100%;
+    display: block;
+  }
+  .priceBox {
+    width: 60%;
+    transform: translate(30%);
+  }
+  .contactBox div:first-child {
+    width: 40%;
+    padding-right: 7%;
+    font-size: 90%;
+  }
+  .contactBox div:last-child {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .btn {
+    margin: 10px 0 0 0;
+  }
+}
