@@ -11,29 +11,32 @@
     <link rel="stylesheet" href="./resources/css/style.css">
     <link rel="stylesheet" href="./resources/css/query.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 
 <body>
     <header class="header-section">
-        <nav class="row clearfix">
-            <a href=""><img class="logo" src="./resources/css/img/logo-white.png" alt=""></a>
+        <nav class=" row clearfix">
+            <a href=""><img class="logo" src="./resources/img/logo-white.png" alt=""></a>
+            <a href=""><img class="logo-black" src="./resources/img/logo.png" alt=""></a>
             <ul class="nav-bar">
-                <li class="nav-item"> <a href="#section1">Food delivery</a></li>
-                <li class="nav-item"> <a href="#section3">How it works</a> </li>
-                <li class="nav-item"><a href="#section4">Our cities</a> </li>
-                <li class="nav-item"> <a href="#section6">Sign up</a> </li>
+                <li class="nav-item"> <a href="#feature">Food delivery</a></li>
+                <li class="nav-item"> <a href="#howItWork">How it works</a> </li>
+                <li class="nav-item"><a href="#citySection">Our cities</a> </li>
+                <li class="nav-item"> <a href="#priceSection">Sign up</a> </li>
             </ul>
+            <a class="mobile-nav">menu</a>
         </nav>
         <div class="row heading">
             <h1>Goodbye junk food. <br> Hello super healthy meals.</h1>
-            <a class="btn btn-hungry" href="#section6"> I’m hungry </a>
-            <a class="btn btn-more" href="#section1"> Show me more </a>
+            <a class="btn btn-hungry js--btn-hungry" href="#"> I’m hungry </a>
+            <a class="btn btn-more js--btn-more" href="#"> Show me more </a>
             </h1>
         </div>
     </header>
 
-    <section class="feature" id="section1">
+    <section class="feature js--feature" id="feature">
         <div class="row feature-header">
             <h2>
                 Get food fast — not fast food
@@ -79,7 +82,7 @@
     </section>
 
 
-    <section class="fav-meal" id="section2">
+    <section class="fav-meal">
         <div>
             <ul class="meals">
                 <li>
@@ -130,9 +133,9 @@
         </div>
     </section>
 
-    <section class="howItWork" id="section3">
+    <section class="howItWork" id="howItWork">
         <div class="row">
-            <h2>How it works - Simple as 1, 2, 3</h2>
+            <h2>How it works - Simple as 1,2,3</h2>
         </div>
 
         <div class="howItWork_box clearfix">
@@ -159,33 +162,33 @@
             </div>
     </section>
 
-    <section class="citySection" id="section4">
+    <section class="citySection" id="citySection">
         <div class="row">
             <h2>We're currently in these cites</h2>
         </div>
-        <div class="row clearfix">
-            <div class="col span_1_of_4">
+        <div class="row clearfix cityRow">
+            <div class="col span_1_of_4 city">
                 <img class="cityImg" src="./resources/img/lisbon-3.jpg" alt="">
                 <h4>LISBON</h4>
                 <p>1600+ happy eaters</p>
                 <p>60+ top chefs </p>
                 <p><a href=""> @omnifood_lx</a></p>
             </div>
-            <div class="col span_1_of_4">
+            <div class="col span_1_of_4 city">
                 <img class="cityImg" src="./resources/img/san-francisco.jpg" alt="">
                 <h4>SAN FRANCISCO</h4>
                 <p>3700+ happy eaters</p>
                 <p>160+ top chefs </p>
                 <p><a href=""> @omnifood_sf</a></p>
             </div>
-            <div class="col span_1_of_4">
+            <div class="col span_1_of_4 city">
                 <img class="cityImg" src="./resources/img/berlin.jpg" alt="">
                 <h4>BERLIN</h4>
                 <p>2300+ happy eaters</p>
                 <p>110+ top chefs </p>
                 <p> <a href="">@omnifood_berlin</a></p>
             </div>
-            <div class="col span_1_of_4">
+            <div class="col span_1_of_4 city">
                 <img class="cityImg" src="./resources/img/london.jpg" alt="">
                 <h4>LONDON</h4>
                 <p>1200+ happy eaters</p>
@@ -195,7 +198,7 @@
         </div>
     </section>
 
-    <section class="customersSetion" id="section5">
+    <section class="customersSetion">
         <div class="row">
             <h2>Our customers can't live without us </h2>
         </div>
@@ -235,7 +238,7 @@
         </div>
     </section>
 
-    <section class="priceSection" id="section6">
+    <section class="priceSection js--priceSection" id="priceSection">
         <div class="row">
             <h2>START EATING HEALTHY TODAY</h2>
         </div>
@@ -291,7 +294,7 @@
         </div>
     </section>
 
-    <section class="contactSection" id="section7">
+    <section class="contactSection">
         <div class="row">
             <h2>WE'RE HAPPY TO HEAR FROM YOU</h2>
         </div>
@@ -371,6 +374,13 @@
             <p class="copyright">copyright &copy; by BMPS Learning center</p>
         </div>
     </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="./resources/js/script.js"></script>
 </body>
 
 </html>

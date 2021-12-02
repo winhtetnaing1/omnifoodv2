@@ -1,7 +1,18 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 
@@ -9,11 +20,10 @@ html {
   font-size: 20px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  scroll-behavior: smooth;
 }
 
 .row {
-  width: 1140px;
+  max-width: 1140px;
   margin: 0 auto;
 }
 
@@ -54,7 +64,6 @@ h2 {
   font-size: 190%;
   margin-bottom: 20px;
   text-align: center;
-  text-transform: capitalize;
 }
 
 h2::after {
@@ -87,6 +96,8 @@ h5 {
   border: 1px solid #7483d4;
   padding: 10px 20px;
   cursor: pointer;
+  -webkit-transition: background-color 0.5s, border 0.5s color 0.5s;
+  -o-transition: background-color 0.5s, border 0.5s color 0.5s;
   transition: background-color 0.5s, border 0.5s color 0.5s;
 }
 
@@ -109,6 +120,8 @@ h5 {
 .btn-hungry:link {
   background: #eb6a00;
   border: 1px solid #eb6a00;
+  -webkit-transition: background-color 0.5s, border 0.5s;
+  -o-transition: background-color 0.5s, border 0.5s;
   transition: background-color 0.5s, border 0.5s;
 }
 
@@ -124,6 +137,8 @@ h5 {
 .btn-more:link {
   background: #7483d4;
   border: 1px solid #7483d4;
+  -webkit-transition: background-color 0.5s, border 0.5s;
+  -o-transition: background-color 0.5s, border 0.5s;
   transition: background-color 0.5s, border 0.5s;
 }
 
@@ -137,6 +152,16 @@ h5 {
 /* header section  */
 
 header {
+  background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.7)),
+      to(rgb(0, 0, 0, 0.7))
+    ),
+    url("./img/hero.jpg");
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7)),
+    url("./img/hero.jpg");
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7)),
     url("./img/hero.jpg");
   height: 100vh;
@@ -149,10 +174,12 @@ header {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
-/* navbar */
+/*main navbar */
 
 nav {
   position: relative;
@@ -162,6 +189,13 @@ nav {
   height: 80px;
   width: auto;
   float: left;
+}
+.logo-black {
+  height: 60px;
+  width: auto;
+  float: left;
+  display: none;
+  margin: 5px 0;
 }
 .nav-bar {
   float: right;
@@ -179,6 +213,8 @@ nav {
   padding: 5px 15px;
   margin-left: 10px;
   border: 1px solid #eb6a00;
+  -webkit-transition: background-color 0.5s, border 0.5s;
+  -o-transition: background-color 0.5s, border 0.5s;
   transition: background-color 0.5s, border 0.5s;
 }
 
@@ -189,6 +225,11 @@ nav {
   position: relative;
   top: 2px;
 }
+
+.mobile-nav {
+  display: none;
+}
+/* sticky nav */
 
 /* feature section */
 .feature-header {
@@ -223,6 +264,8 @@ nav {
   padding: 0;
 }
 .meals {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -241,12 +284,20 @@ figure {
 .meal-photo {
   width: 100%;
   height: auto;
+  -webkit-transform: scale(1.04);
+  -ms-transform: scale(1.04);
   transform: scale(1.04);
   opacity: 0.7;
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, -webkit-transform 0.5s;
+  -o-transition: transform 0.5s, opacity 0.5s;
   transition: transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
 }
 
 .meal-photo:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
   transform: scale(1.1);
   opacity: 1;
 }
@@ -276,6 +327,8 @@ figure {
 
 .step {
   margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-top: 40px;
 }
@@ -329,6 +382,16 @@ figure {
 /* customersSetion */
 
 .customersSetion {
+  background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.7)),
+      to(rgba(0, 0, 0, 0.7))
+    ),
+    url("./img/back-customers.jpg");
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("./img/back-customers.jpg");
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("./img/back-customers.jpg");
   background-size: cover;
@@ -365,7 +428,11 @@ blockquote::after {
 cite {
   display: block;
   margin: 30px 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -383,13 +450,18 @@ cite {
 }
 
 .planContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
 .priceBox {
   background-color: #a7b3f1;
   width: 28%;
+  -webkit-box-shadow: 5px 1px 7px #7483d4;
   box-shadow: 5px 1px 7px #7483d4;
   border-radius: 14px;
   border: 1px solid #fff;
@@ -505,4 +577,18 @@ textarea {
 
 .icon:hover {
   color: #7483d4;
+}
+
+/* animation section */
+.app,
+.cityRow,
+.feature-body {
+  opacity: 0;
+  transition: opacity;
+}
+
+.cityRow.animated,
+.app.animated,
+.feature-body.animated {
+  opacity: 1;
 }
